@@ -1,17 +1,18 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import BirdGame from './src/components/BirdGame';
-//import Home from './src/screens/Home/Home';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
+//import BirdGame from './src/components/BirdGame';
+import Home from './src/screens/Home/Home';
 
 export default function App() {
   
   return (
     <View style={styles.container}>
       <SafeAreaView>
+        <Home/>
         {/*
-          <Home/>
-        */}
+        Another test app game
         <BirdGame/>
+        */}
       </SafeAreaView>
     </View>
   );
