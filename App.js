@@ -7,13 +7,13 @@ export default function App() {
   
   return (
     <View style={styles.container}>
-      <SafeAreaView>
+      {/*<SafeAreaView>*/}
         <Home/>
         {/*
         Another test app game
         <BirdGame/>
         */}
-      </SafeAreaView>
+      {/*</SafeAreaView>*/}
     </View>
   );
 }

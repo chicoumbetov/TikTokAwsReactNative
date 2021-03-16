@@ -10,7 +10,6 @@ const Bird = ({birdBottom, birdLeft}) => {
             position: 'absolute',
             backgroundColor: 'blue',
             width: 50,
-            height: 60,
             height: birdHeight,
             left: birdLeft - (birdWidth/2),
             bottom: birdBottom,
