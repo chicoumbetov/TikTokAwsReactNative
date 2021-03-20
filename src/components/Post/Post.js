@@ -10,6 +10,7 @@ import Fontisto from 'react-native-vector-icons/Fontisto';
 const Post = (props) => {
     //const { post } = props;
     const [ post, setPost ] = useState(props.post);
+    const [isLiked, setIsLiked] = useState(false)
 
     const [paused, setPaused] = useState({})
 
@@ -22,11 +23,14 @@ const Post = (props) => {
     }
 
     const onLikePress = () => {
-        //console.warn('like')
+        
+        const likesToAdd = isLiked ? -1 : 1
+
         setPost({
             ...post,
-            likes: post.likes + 1
-        })
+            likes: post.likes + likesToAdd,
+        });
+        setIsLiked(!isLiked)
     };
 
     const videoRef = useRef(null);
@@ -56,7 +60,7 @@ const Post = (props) => {
                         style={styles.iconContainer}
                         onPress={onLikePress}
                     >
-                        <AntDesign name={"heart"} size={40} style={{ alignSelf: 'center' }} color="white" />
+                        <AntDesign name={"heart"} size={40} style={{ alignSelf: 'center' }} color={isLiked ? "red" : "white"} />
                         <Text style={styles.statsLabel}>{post.likes}</Text>
                     </TouchableOpacity>
 
