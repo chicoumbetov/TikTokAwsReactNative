@@ -8,12 +8,11 @@ import {
     createStackNavigator
 } from '@react-navigation/stack';
 
-//import { createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-
-import HomeScreen from '../screens/HomeScreen/HomeScreen';
+//import HomeScreen from '../screens/HomeScreen/HomeScreen';
 //import SearchScreen from '../screens/Search/SearchScreen';
-import DetailsScreen from '../screens/DetailsScreen/DetailsScreen';
-import ProfileScreen from '../screens/ProfileScreen/ProfileScreen';
+//import DetailsScreen from '../screens/DetailsScreen/DetailsScreen';
+//import ProfileScreen from '../screens/ProfileScreen/ProfileScreen';
+import HomeBottomTabNavigator from './HomeBottomTabNavigator';
 
 const Stack = createStackNavigator();
 
@@ -27,9 +26,7 @@ export default function Navigation() {
                     headerShown: false,
                 }}
             >
-                <Stack.Screen name="Home" component={HomeScreen} />
-                <Stack.Screen name="Profile" component={ProfileScreen} />
-                <Stack.Screen name="Details" component={DetailsScreen} />
+                <Stack.Screen name="Home" component={HomeBottomTabNavigator} />
             </Stack.Navigator>
         </NavigationContainer>
     );

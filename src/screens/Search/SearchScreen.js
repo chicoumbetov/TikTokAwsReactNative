@@ -1,13 +1,15 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { SafeAreaView, Text, View } from 'react-native'
 
 const SearchScreen = () => {
     console.log("SearchScreen");
-    
+
     return (
-        <View style={{flex: 1}}>
-            <Text>SearchScreen</Text>
-        </View>
+        <SafeAreaView style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <View >
+                <Text>SearchScreen</Text>
+            </View>
+        </SafeAreaView>
     )
 }
 
