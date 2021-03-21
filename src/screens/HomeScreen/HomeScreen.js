@@ -4,10 +4,11 @@ import Post from '../../components/Post/Post';
 
 import posts from '../../../data/posts';
 
-const Home = () => {
+const HomeScreen = () => {
+    console.log("Home")
     
     return (
-        <View>
+        <View style={{ flex: 1 }}>
             <FlatList 
                 data={posts}
                 renderItem={({item}) => <Post post={item} />}
@@ -20,4 +21,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default HomeScreen;

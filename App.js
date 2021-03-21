@@ -1,14 +1,17 @@
-import React from 'react';
-import { SafeAreaView, StyleSheet, View } from 'react-native';
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import { StyleSheet, View } from 'react-native';
 //import BirdGame from './src/components/BirdGame';
-import Home from './src/screens/Home/Home';
+//import Home from './src/screens/HomeScreen/HomeScreen';
+import Navigation from './src/navigation/Navigation';
 
 export default function App() {
+  console.log("App")
   
   return (
     <View style={styles.container}>
       {/*<SafeAreaView>*/}
-        <Home/>
+        <Navigation/>
         {/*
         Another test app game
         <BirdGame/>
@@ -21,8 +24,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: 'black',
   },
 });
