@@ -10,6 +10,11 @@
       "StackName": "amplify-tiktokawsreactnative-dev-00148",
       "StackId": "arn:aws:cloudformation:ca-central-1:317586112677:stack/amplify-tiktokawsreactnative-dev-00148/6d09cbc0-8a99-11eb-9c93-0af856d23bea",
       "AmplifyAppId": "du586wwmnjt5b"
+    },
+    "categories": {
+      "auth": {
+        "tiktokawsreactnativec1ea4203": {}
+      }
     }
   }
 }
