@@ -5,6 +5,10 @@ import { StyleSheet, View } from 'react-native';
 //import Home from './src/screens/HomeScreen/HomeScreen';
 import Navigation from './src/navigation/Navigation';
 
+import Amplify from 'aws-amplify'
+import config from './src/aws-exports'
+Amplify.configure(config)
+
 export default function App() {
   console.log("App")
   
