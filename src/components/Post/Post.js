@@ -41,7 +41,7 @@ const Post = (props) => {
     const getVideoUri = async () => {
         if (post.videoUri.startsWith('http')) {
             setVideoUri(post.videoUri);
-            return;
+            return post.videoUri;
         }
         setVideoUri(await Storage.get(post.videoUri));
     };
@@ -64,7 +64,7 @@ const Post = (props) => {
                     onError={(e) => console.log(e)}
                     resizeMode="cover"
                     shouldPlay
-                    //isLooping
+                    isLooping
                     onPlaybackStatusUpdate={paused => setPaused(() => paused)}
                 />
             </TouchableWithoutFeedback>

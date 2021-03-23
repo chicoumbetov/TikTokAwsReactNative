@@ -13,6 +13,7 @@ import {
 //import DetailsScreen from '../screens/DetailsScreen/DetailsScreen';
 //import ProfileScreen from '../screens/ProfileScreen/ProfileScreen';
 import HomeBottomTabNavigator from './HomeBottomTabNavigator';
+import CreatePost from '../screens/CreatePost/CreatePost';
 
 const Stack = createStackNavigator();
 
@@ -27,6 +28,13 @@ export default function Navigation() {
                 }}
             >
                 <Stack.Screen name="Home" component={HomeBottomTabNavigator} />
+                <Stack.Screen 
+                    name="CreatePost" component={CreatePost}
+                    options={{
+                        headerShown: true,
+                        title: 'Post'
+                    }}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     );

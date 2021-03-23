@@ -1,6 +1,6 @@
 {
     "identityPoolName": "tiktokawsreactnativec1ea4203_identitypool_c1ea4203",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "tiktokc1ea4203",
     "userPoolName": "tiktokawsreactnativec1ea4203_userpool_c1ea4203",
     "autoVerifiedAttributes": [

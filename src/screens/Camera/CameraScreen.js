@@ -4,14 +4,17 @@ import * as ImagePicker from 'expo-image-picker';
 import { Camera } from 'expo-camera';
 import styles from './styles';
 import { useRef } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 export default function App() {
+
+  const camera = useRef()
+  const navigation = useNavigation();
 
   const [hasPermission, setHasPermission] = useState(null);
   const [type, setType] = useState(Camera.Constants.Type.back);
 
   const [isRecording, setIsRecording] = useState(false)
-  const camera = useRef()
 
   useEffect(() => {
     (async () => {
@@ -42,7 +45,9 @@ export default function App() {
     } else {
       setIsRecording(true)
       const data = await camera.current.recordAsync();
-      console.log(data)
+      
+      console.log(data.uri)
+      navigation.navigate("CreatePost", { videoUri: data.uri })
     }
   };
 

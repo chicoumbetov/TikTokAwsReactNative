@@ -41,7 +41,7 @@ function App() {
     const fetchUser = async () => {
       //get currently authenticated user
       const userInfo = await Auth.currentAuthenticatedUser({ bypassCache: true })
-      console.log(userInfo)
+      //console.log(userInfo)     //Cognito User info
 
       if (!userInfo) {
         return;
