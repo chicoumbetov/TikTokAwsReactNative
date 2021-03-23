@@ -6,6 +6,7 @@ import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen/ProfileScreen';
 import DetailsScreen from '../screens/DetailsScreen/DetailsScreen';
 import SearchScreen from '../screens/Search/SearchScreen';
+import CameraScreen from '../screens/Camera/CameraScreen';
 
 import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -48,7 +49,7 @@ const HomeBottomTabNavigator = () => {
                     }} 
                 />
                 <Tab.Screen 
-                    name="Upload" component={ProfileScreen} 
+                    name="Upload" component={CameraScreen} 
                     options={{
                         tabBarIcon: () => (
                             <Image 
